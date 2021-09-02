@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es" data-dark>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios DOM</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <body data-dark>
+    <header>
+        <h1>Ejercicios DOM</h1>
+    </header>
+
+    <button class="panel-btn hamburger hamburger--spring" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+        <aside class="panel">
+        <nav class="menu">
+            <a href="#seccion1">Reloj Digital y Alarma</a>
+            <a href="#seccion2">Eventos de Teclado</a>
+            <a href="#seccion3">Cuenta Regresiva</a>
+            <a href="#seccion4">Responsive con JavaScript</a>
+            <a href="#seccion5">Responsve Slide</a>
+            <a href="#seccion6">Seccion6</a>
+            <a href="#seccion7">Seccion7</a>
+            <a href="#seccion8">Seccion8</a>
+            <a href="#seccion9">Seccion9</a>
+        </nav>
+        </aside>
+
+        <main>
+            <section id="seccion1" class="section">
+                <h2>Reloj Digital y Alarma</h2>
+                <div id="reloj">
+                    --:--:--
+                </div>
+                <div class="btn-reloj">
+                    <button dark-btn id="activar-reloj" >Activar Reloj</button>
+                    <button dark-btn id="detener-reloj">Detener Reloj</button>
+                    <button dark-btn id="activar-alarma">Activar a alarma</button>
+                    <button dark-btn id="detener-alarma">Detener Alarma</button>
+                </div>
+            </section>
+            <section id="seccion2" class="section">
+                <h2>Eventos de Teclado</h2>
+                <article class="stage">
+                    <div class="ball">
+                        
+                    </div>
+                </article>
+            </section>
+            <section id="seccion3" class="section">
+                <h2>Cuenta Regresiva</h2>
+                <div id="countDown">
+                    
+                </div>
+            </section>
+            <section id="seccion4" class="section">
+                <h2>Responsive con JavaScript</h2>
+                <div id="youtube"></div>
+                <div id="map"></div>
+            </section>
+            <section id="seccion5" class="section">
+                <h2>Responsive Slider</h2>
+                <div class="slider">
+                    <div class="slider-slides">
+                        <div class="slider-slide active">
+                            <img src="https://placeimg.com/1000/720/animals" alt="animals">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="https://placeimg.com/1000/720/nature" alt="nature">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="https://placeimg.com/1000/720/people" alt="people">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="https://placeimg.com/1000/720/tech/grayscale" alt="tech/grayscale">
+                        </div>
+                    </div>
+                    <div class="slider-btns">
+                        <div class="prev .btn__slide" >&laquo;</div>
+                        <div class="next .btn__slide" >&raquo;</div>
+                    </div>
+                </div>
+            </section>
+            <section id="seccion6" class="section">
+                <h2>Filtro de Busqueda</h2>
+                <input type="search" placeholder="Buscar..." class="card-filter">
+                <article class="cards">
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/280/animals" alt="animals">
+                        <figcaption>Nature</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/280/any" alt="Any">
+                        <figcaption>Any</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/280/tech" alt="Tech">
+                        <figcaption>Tech</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/280/animals" alt="animals">
+                        <figcaption>Animals</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/280/people" alt="People">
+                        <figcaption>People</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="https://placeimg.com/200/280/arch" alt="People">
+                        <figcaption>Architecture</figcaption>
+                    </figure>
+                </article>
+            </section>
+            <section id="seccion7" class="section">
+                <h2>Seccion7</h2>
+                <button class="arriba">
+                    <i class="fas fa-sort-up"></i>
+                </button>
+                <button class="abajo">
+                    <i class="fas fa-sort-down"></i>
+                </button>
+                <button class="stop">
+                    <i class="fas fa-stop"></i>
+                </button>
+                <button class="play">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                </button>
+                <div class="contendor_scroll" id="contenedor_scroll">
+                    <div class="text">
+                        1
+                    </div>
+                    <div class="text">
+                        2
+                    </div>
+                    <div class="text">
+                        3
+                    </div>
+                    <div class="text">
+                        4
+                    </div>
+                    <div class="text">
+                        5
+                    </div>
+                    <div class="text">
+                        6
+                    </div>
+                    <div class="text">
+                        7
+                    </div>
+                    <div class="text">
+                        8
+                    </div>
+                    <div class="text">
+                        9
+                    </div>
+                    <div class="text">
+                        10
+                    </div>
+                </div>
+            </section>
+            <section id="seccion8" class="section">
+                <h2>Seccion9</h2>
+            </section>
+            <section id="seccion10" class="section">
+                <h2>Seccion10</h2>
+            </section>
+            <button class="scroll-top-btn hidden">
+                &#11014;
+            </button>
+
+            <button class="dark-mood">
+                🌙
+            </button>
+        </main>
+        
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    border: none;
+    outline: none;
+}
+
+:root{
+    --min-width: 1300px;
+    --color_font: #fff;
+    --second_color: #060D24;
+    --background-color: #070C20;
+    --tree_color: #3EE8E5;
+    --colo-gradient: rgba(35,55,55, 0.6)
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+.header{
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    padding: 20px 2rem;
+}
+.title{
+    font-size: 35px;
+    width: 40%;
+    font-weight: 700;
+    color: var(--color_font);
+    /* background-color: aqua; */
+    text-align: center;
+}
+img{
+    width: 60%;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+}
+.menu-btn{
+    display: none !important;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: all .4s ease-in-out;
+}
+.nav-link a:hover{
+    cursor: pointer;
+    border-bottom: 3px solid #fff;
+    transform: translate(0, -5px);
+}
+.contac-btn{
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 7px;
+    color: var(--second_color);
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--tree_color);
+    transition: all .4s ease-in-out;
+}
+.contac-btn:hover{
+    background-color: var(--background-color);
+    color: var(--color_font);
+    border: 2px solid var(--tree_color);
+}
+
+@media screen and (max-width: 645px ){
+    .nav-link{
+        position: fixed;
+        transform: translate(0, -200%);
+    }
+    .title{
+        text-align: center;
+        width: 100%;
+    }
+    .menu-btn{
+        display: inline !important;
+        position: fixed;
+        bottom: 1.5vh;
+        right: 2.5vw;
+        width: 65px;
+        height: 65px;
+        background-color: var(--tree_color) !important;
+        border-radius: 100%;
+        z-index: 999;
+        padding: 1rem !important;
+        text-align: center;
+    }
+    .hamburger-box{
+        height: 30px !important;
+    }
+    .hamburger-inner,
+    ::after,
+    ::before{
+        width: 37px !important;
+        background-color: #fff !important
+    }
+    .nav-link.is-active{
+        z-index: 998;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: var(--colo-gradient);
+        transition: all .5s ease;
+        transform: translate(0, 0);
+    }
+    .nav-link.is-active a{
+        font-size: 23px;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+    .nav-link.is-active a:hover{
+        transform: translate(0,0);
+    }
+    .contac-btn{
+        font-size: 23px;
+        width: 100%;
+        border-radius: 0;
+    }
+} 

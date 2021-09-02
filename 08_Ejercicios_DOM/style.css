@@ -1,0 +1,350 @@
+
+:root{
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --second-color: #f7df1e;
+    --main-modal-color: rgba(247, 222, 30, 0.85);
+    --second-modal-color: rgba(34,34,34, 0.85);
+    --container-width: 1300px
+}
+
+html{
+    box-sizing: border-box;
+    font-size: var(--font-size);
+    font-family: var(--main-font);
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    /* min-width: 1300px; */
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/****  Menu Hamburguesa  ****/
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: var(--main-modal-color);
+    color: var(--second-modal-color);
+    padding: 1rem;
+    /* min-height: 60px; */
+    z-index: 999;
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    min-height: calc(100vh - 69px);
+}
+
+.section{
+    padding: 2rem;
+    padding-top:5rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 100%; */
+    text-align: center;
+    max-width: var(--container-width);
+    min-height: 100vh;
+}
+
+.panel{
+    width: 100%;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--second-modal-color);
+
+    /* Salir de Arriba */
+        /* transform: translate(0, -100%); */
+    /* Salir de Abajo */
+        /* transform: translate(0, 100%); */
+    /* Salir de Derecha */
+        /* transform: translate(100%, 0); */
+    /* Salir de Izquierda */
+        transform: translate(-150%, 0);
+    transition: all 0.5s ease;
+}
+.panel.is-active{
+    transform: translate(0,0);
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--second-color) !important;
+    display: flex !important; 
+    justify-content: center;
+    align-items: center;
+} 
+
+.menu {
+    width: inherit;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu a{
+    width: inherit;
+    display: block;
+    padding: 3rem;
+    font-size: var(--font-size);
+    color: ivory;
+    text-decoration: none;
+    color: var(--main-modal-color);
+    font-size: 25px;
+}
+
+.menu a:hover{
+    transition: all .5s ease-in;
+    background-color: var(--second-color);
+    color: var(--second-modal-color);
+}
+#seccion1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+#seccion1 h2{
+    /* background-color: red; */
+    font-size: 30px;
+    /* padding-bottom: 2rem; */
+}
+
+#reloj{
+    height: 50px;
+    border-radius: 15px;
+    width: 50%;
+    border: 2px solid var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+.btn-reloj{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.btn-reloj button{
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: var(--second-modal-color);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* .btn-reloj button:hover{
+    background-color: var(--second-color);
+    color: var(--second-modal-color);
+} */
+
+
+/***** ESTILOS PARA EVENTOS DE TECLADO ********/
+
+.stage{
+    display: flex;
+    min-height: 50vh;
+    background-color: var(--second-modal-color);
+    overflow: hidden;
+}
+.ball{
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--second-color);
+}
+
+.scroll-top-btn{
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    z-index: 999;
+    bottom: 1vh;
+    right: calc(5.5rem - 1vw);
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: var(--second-color);
+    font-size: 40px;
+    padding: 2px;
+    text-align: center;
+    transition: all .3s ease-out;
+    font-weight: bold;
+}
+
+.scroll-top-btn:hover{
+    background-color: var(--second-modal-color);
+    color: var(--second-color);
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dark-mood{
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: var(--second-color);
+    font-size: 40px;
+    padding: 2px;
+    text-align: center;
+    transition: all .3s ease-out;
+    font-weight: bold;
+    cursor: pointer;
+}
+.dark-mood:hover{
+    background-color: var(--second-modal-color);
+    color: var(--second-color);
+}
+
+.dark{
+    background-color: var(--second-modal-color);
+    color: var(var(--second-color))
+}
+.dark-btn{
+    background-color: yellow !important;
+    color: var(--second-modal-color) !important;
+}
+
+
+/* ESTILOS PARA EL RESPONSIVE SLIDE */
+
+.slider{
+    /* z-index: 996; */
+    position: relative;
+    text-align: center;
+    width:  100%;
+    margin:1rem auto;
+}
+.slider-slides{
+    /* position: relative; */
+    height: 500px;
+}
+.slider-slide{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0; */
+    visibility: hidden;
+    transition:  opacity 1s ease;
+}
+.slider-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+.slider-btns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    /* font-size: 2rem; */
+}
+
+.slider-btns .prev, .next{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: thin solid #000;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: all .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*  *********** SEARCH FILTERS ************** */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card{
+    /* color: var(--second-modal-color); */
+    transition: all 0.3s ease-out;
+    background-color: var(--second-modal-color);
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card figcaption{
+    padding: 1rem;
+}
+.filter{
+    display: none;
+}
+
+
+.contendor_scroll{
+    height: 300px;
+    padding-top: 18px;
+    background-color: aqua;
+    overflow-y: scroll;
+}
+.contendor_scroll::-webkit-scrollbar{
+    display: none;
+}
+.text{
+    height: 80px;
+    border-bottom: 1px solid black;
+    margin-bottom: 16px;
+    font-size: 50px;
+}
